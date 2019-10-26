@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8&5xpfoj77!qdi&airbzjm&5c@_scl#$3=l!rj@n=w%-mj^%q2'
+SECRET_KEY = 'b@9txf9z_wz7z&!*uyy5cx+4ju-)zg3&$3g0-4xh!5&sd)9xr9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'fariw11549.pythonanywhere.com']
+ALLOWED_HOSTS = [u'fariw11549.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'linuxapp',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,10 @@ STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = u'/home/fariw11549/mysite/media'
+MEDIA_ROOT = u'/home/sombats/mysite/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/fariw11549/mysite/static'
+#STATIC_ROOT = u'/home/sombats/mysite/static'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
 STATIC_URL = '/static/'
