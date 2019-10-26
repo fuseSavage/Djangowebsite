@@ -19,6 +19,7 @@ from linuxapp import views as linuxappviews
 
 urlpatterns = [
     path('', linuxappviews.index),
+    path('developer',linuxappviews.developer),
     path('services', linuxappviews.services),
     path('admin/', admin.site.urls),
 ]
